@@ -1,0 +1,7 @@
+picoCTF{4p0110_1n_7h3_h0us3_67c6cc96}
+
+First, you will have to download the provided files to capture this flag. Once completed, navigate to the command line to run the python script. I did it
+on my virtualized Kali Linux machine which already had python3 downloaded. The code will look like:
+
+"python3 ende.py -d flag.txt.en"
+Following this command, you will be prompted for a password, which was provided in this activity. Enter the password and the flag is returned. 
