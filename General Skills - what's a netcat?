@@ -1,0 +1,6 @@
+picoCTF{nEtCat_Mast3ry_d0c64587}
+
+Used netcat (nc) to connect to jupiter.challenges.picoctf.org at port 25103:
+
+$ nc jupiter.challenges.picoctf.org 25103
+This gives you the flag.
