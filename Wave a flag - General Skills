@@ -1,0 +1,12 @@
+picoCTF{b1scu1ts_4nd_gr4vy_30e77291}
+
+Method 1: Download the file, "warm" and transfer it into a Linux computer (I use Kali Linux). Use the "cat" command on terminal to display the contents of the file. Near the bottom displays the flag.
+
+Method 2: Download the file, "warm" and transfer it into a Linux computer (I use Kali Linux). Make the file executable with:
+"chmod +x ./warm"
+execute the file
+"sudo ./warm"
+It asks to use the help option to see what it can do so...
+"sudo ./warm -hoh"
+
+This gives the flag.
