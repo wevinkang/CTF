@@ -1,0 +1,6 @@
+picoCTF{the_m3tadata_1s_modified}
+
+Use "exiftool" tool to inspect information on the cat.jpg. Under License, we can see there is a collection of letters and numbers that appears to be base64
+encoded so we will use the following command to decode it:
+"echo cGljb0NURnt0aGVfbTN0YWRhdGFfMXNfbW9kaWZpZWR9 | base64 -d"
+This command then gives you the flag.
