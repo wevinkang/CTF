@@ -1,0 +1,4 @@
+picoCTF{g00d_k1tty!_n1c3_k1tty!_9b3b7392}
+
+Used netcat (nc) to connect to mercury.picoctf.net via port 35652 which returned a code in ASCII. Used an online converter, ASCII to text which gave the
+flag in readable format. 
