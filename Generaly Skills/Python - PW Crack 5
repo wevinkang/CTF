@@ -1,0 +1,11 @@
+Using the python script provided we can add to it to provide us the password by matching the hashed password against the provided password list. 
+
+Had to end up looking for the solution online, but learned about splitlines function in Python.
+
+Adding the following to the end of the provided script and running it, provided us the password to capture the flag.
+pw_list = open('dictionary.txt', 'r').read().splitlines()
+
+for pw in pw_list:
+    if hash_pw(pw) == correct_pw_hash:
+        print("The password is: " + pw)
+        break
