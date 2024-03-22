@@ -1,0 +1,6 @@
+Download the zip file.
+
+Following command gives us the flag.
+
+strings file.zip | grep pico
+
