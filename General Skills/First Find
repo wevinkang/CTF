@@ -4,3 +4,4 @@ Following command gives us the flag.
 
 strings file.zip | grep pico
 
+Lessons learned: Strings command can be useful for looking for printable strings in a file. Useful for identifying random object files.
