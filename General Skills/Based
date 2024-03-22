@@ -1,0 +1,18 @@
+nc jupiter.challenges.picoctf.org 15130
+Convert the encoded strings, I used CyberChef but there's many tools out there.
+'''
+01100110 01100001 01101100 01100011 01101111 01101110
+'''
+from Binary = falcon
+
+'''
+143 150 141 151 162
+'''
+from Octal = chair
+
+'''
+736f636b6574
+'''
+from Hex = socket
+
+Flag: picoCTF{learning_about_converting_values_02167de8}
