@@ -1,0 +1,9 @@
+ssh picoplayer@saturn.picoctf.net -p63342 
+
+Basic script called "useless"
+Executing ./useless only tells us to read the code first.
+cat useless, shows it's a simple calculating script, but no flags seen.
+
+man useless gives us the flag at the bottom underneath Authors
+
+Flag: picoCTF{us3l3ss_ch4ll3ng3_3xpl0it3d_8504}
