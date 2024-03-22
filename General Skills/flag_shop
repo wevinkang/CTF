@@ -1,0 +1,8 @@
+In this challenge, we can look at the store.c python script to examine what the source code looks like and if we can exploit anything about the script so that we can have a large enough balance to purchase the flag from the shop.
+As it is right now the price of the flag is too high for us to purchase as the script gives us only $1100 and the flag costs $10000.
+
+Here I had to do more research into "Two's Complement" method for representing signed integers as the source code stores the number as = 0, meaning a positive number. 
+So we want to attempt an integer overflow with total_cost which is a signed integer. The limit is +- 2,147,483,647 so we need the output to overflow the limit, but not so large a number that it overflows our account_balance. 
+Using 3000000 works and gives us a higher account balance to purchase the flag. 
+
+Flag: picoCTF{m0n3y_bag5_68d16363}
