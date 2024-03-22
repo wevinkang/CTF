@@ -1,0 +1,6 @@
+nc jupiter.challenges.picoctf.org 14291
+Connecting to the server, outputs lots of data. We need to control the output and find the flag, so let's append the output to a file so that we can grep the flag.
+nc jupiter.challenges.picoctf.org 14291 >> file.txt 
+cat file.txt | grep pico
+
+Flag: picoCTF{digital_plumb3r_ea8bfec7}
