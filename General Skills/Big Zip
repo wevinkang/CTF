@@ -1,0 +1,6 @@
+Download the zip file.
+
+unzip big-zip-files
+cd big-zip-files | ls | grep -d recurse pico
+
+Lessons learned: How powerful grep can be, using the above command we were able to search through many files and directories with a single command for the keyword, pico.
