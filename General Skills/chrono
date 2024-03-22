@@ -1,8 +1,8 @@
-'''ssh picoplayer@saturn.picoctf.net -p58784 '''
+**ssh picoplayer@saturn.picoctf.net -p58784**
 Enter provided pw for server.
 
 The task asks how to automate tasks at intervals in Linux so the flag is likely in /etc/crontab
 
-'''cd /etc | cat crontbab'''
+**cd /etc | cat crontbab**
 
 Flag: picoCTF{Sch3DUL7NG_T45K3_L1NUX_9d5cb744}
