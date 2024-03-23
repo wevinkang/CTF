@@ -1,0 +1,11 @@
+Connecting to the provided server gives us a strange Shell that jumbles up our commands and does not allow us to navigate properly.
+
+Ended up using the following to execute commands in this peculiar shell, "${parameter='command_here'}"
+
+${parameter=ls}
+(Shows us the blargh directory)
+${parameter=ls blargh}
+(shows us flag.txt)
+${parameter=cat blargh/flag.txt}
+
+Flag: picoCTF{5p311ch3ck_15_7h3_w0r57_6a2763f6}
