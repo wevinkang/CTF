@@ -1,0 +1,88 @@
+This time we can't just interpret the lyrics.txt file with the rockstar interpreter as it asks for a password for interpreting it. 
+Turns out, we can use a python transpiler to translate rockstar programming language to python. If you're more familiar with another language you could likely just transpile it to that one, but I'm most familiar with Python.
+
+pip install rockstar-py
+cd ~/.local/bin
+./rockstar-py -i /home/kali/Downloads/lyrics.txt -o /home/kali/Downloads/lyricspython.txt
+cd /home/kali/Downloads | cat lyricspython.txt 
+'''
+Rocknroll = True
+Silence = False
+a_guitar = 10
+Tommy = 44
+Music = 170
+the_music = input()
+if the_music == a_guitar:
+    print("Keep on rocking!")
+    the_rhythm = input()
+    if the_rhythm - Music == False:
+        Tommy = 66
+        print(Tommy!)
+        Music = 79
+        Jamming = 78
+        print(Music!)
+        print(Jamming!)
+        Tommy = 74
+        print(Tommy!)
+        They are dazzled audiences
+        print(it!)
+        Rock = 86
+        print(it!)
+        Tommy = 73
+        print(it!)
+        break
+        print("Bring on the rock!")
+        Else print("That ain't it, Chief")
+        break
+'''
+
+python3 lyricspython.txt outputs the following error,
+'''
+  File "/home/kali/Downloads/lyricspython.txt", line 12
+    print(Tommy!)
+               ^
+SyntaxError: invalid syntax
+'''
+
+Knowing python language helps you to fix up the script,
+'''
+Rocknroll = True
+Silence = False
+a_guitar = 10
+Tommy = 44
+Music = 170
+print("Enter 10")
+the_music = input()
+
+if int(the_music) == a_guitar:
+    print("Keep on rocking!")
+    the_rhythm = input()
+    if int(the_rhythm) - Music == 0:
+        Tommy = 66
+        print(Tommy)
+        Music = 79
+        Jamming = 78
+        print(Music)
+        print(Jamming)
+        Tommy = 74
+        print(Tommy)
+        #They are dazzled audiences
+        Rock = 86
+        print(Rock)
+        Tommy = 73
+        print(Tommy)
+        #break
+        print("Bring on the rock!")
+    else:
+        print("That ain't it, Chief")
+        #break
+'''
+It looks like the script outputs some ASCII numbers and when decoded in Cyber Chef, I get BONJVI which is not the right flag when inputting it. Common sense made me try BONJOVI which did get me the flag, but I wanted to see if I could edit the script to output the correct ASCII value.
+Turns out if we grab the following lines that weren't given a print function, and put it into the rockstar interpreter, we get the ASCII value of 79. This is indeed our missing value to get the correct flag.
+'''
+They are dazzled audiences
+Shout it!
+'''
+
+Flag: picoCTF{BONJOVI}
+
