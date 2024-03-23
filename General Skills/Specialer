@@ -1,0 +1,15 @@
+ssh -p 54495 ctf-player@saturn.picoctf.net
+
+Again like the "Special" challenge, we can't use all commands such as ls, cat, etc.
+
+Tabbing twice shows us all the commands we have access to and the most useful for us in this challenge will be cd and echo.
+Typing in cd and then tabbing twice is similar to executing ls and can show us which directories or files are in our working directory. 
+
+Now we have to find another way to cat files to find the flag, doing a quick search, we can simply use the following command to print text from a file, "echo $(<text.txt)"
+Using our tools, we navigate through each directories files, to try and enumerate the flag until we get to the directory, "/home/ctf-player/ala" and execute the following
+'''
+Specialer$ echo $(<kazam.txt)
+return 0 picoCTF{y0u_d0n7_4ppr3c1473_wh47_w3r3_d01ng_h3r3_38f5cc78}
+'''
+
+Flag: picoCTF{y0u_d0n7_4ppr3c1473_wh47_w3r3_d01ng_h3r3_38f5cc78}
