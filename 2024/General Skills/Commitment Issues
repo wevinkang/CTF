@@ -1,0 +1,32 @@
+We need to recover the file in which contains the flag.
+
+$ cd drop-in
+$ ls
+  Enumerates the message.txt file that no longer contains the flag.
+$ ls -la
+  Enumerates .git directory.
+$ cd .git
+$ ls | grep -d recurse pico   
+  logs/HEAD:0000000000000000000000000000000000000000 b562f0b425907789d11d2fe2793e67592dc6be93 picoCTF <ops@picoctf.com> 1710201983 +0000  commit (initial): create flag
+  logs/HEAD:b562f0b425907789d11d2fe2793e67592dc6be93 42942c9c605b30100f5d859ef6e172027447c0db picoCTF <ops@picoctf.com> 1710201983 +0000  commit: remove sensitive info
+  logs/refs/heads/master:0000000000000000000000000000000000000000 b562f0b425907789d11d2fe2793e67592dc6be93 picoCTF <ops@picoctf.com> 1710201983 +0000     commit (initial): create flag
+  logs/refs/heads/master:b562f0b425907789d11d2fe2793e67592dc6be93 42942c9c605b30100f5d859ef6e172027447c0db picoCTF <ops@picoctf.com> 1710201983 +0000     commit: remove sensitive info
+Here, I tried to see if I could just search through all the directories and files in .git to find the flag quickly but couldn't. Though we did enumerate some key information that may lead us to the flag.
+We can see the commit ID where the user removed the flag from the file, now just need the following command to revert the message.txt file.
+
+$cd ../
+  cd back to /drop-in
+$ git checkout b562f0b425907789d11d2fe2793e67592dc6be93
+$ cat message.txt 
+  picoCTF{s@n1t1z3_c785c319}
+
+On retrospect we also could've done the following.
+
+$ cd drop-in
+$ git log 
+  Shows the previous commits and shows where user removed flag.
+$ git checkout b562f0b425907789d11d2fe2793e67592dc6be93
+$ cat message.txt 
+  picoCTF{s@n1t1z3_c785c319}
+
+Very interesting one, as I was less familiar with Git commands. 
