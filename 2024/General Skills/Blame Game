@@ -1,0 +1,16 @@
+$ cd drop-in
+$ cat message.py 
+  print("Hello, World!"
+$ git log
+  Ouptput many past commits likely to hide the change, making it difficult to zero in on any anomalies.
+$ ls .git | grep -d recurse picoCTF{
+  .git/logs/HEAD:caa945839a2fc0fb52584b559b4e89ac7c46bf54 8c83358c32daee3f8b597d2b853c1d1966b23f0a picoCTF{@sk_th3_1nt3rn_2c6bf174} <ops@picoctf.com> 1710202031 +0000    commit: optimize file size of prod code
+  .git/logs/refs/heads/master:caa945839a2fc0fb52584b559b4e89ac7c46bf54 8c83358c32daee3f8b597d2b853c1d1966b23f0a picoCTF{@sk_th3_1nt3rn_2c6bf174} <ops@picoctf.com> 1710202031 +0000       commit: optimize file size of prod code
+
+Flag: picoCTF{@sk_th3_1nt3rn_2c6bf174}
+
+Was able to find the flag using grep, but curious if there's another way to solve the flag.
+
+$ git log > gitlogs.txt
+$ tail gitlogs.txt
+  Shows the commits and flag at bottom of file.
