@@ -1,0 +1,6 @@
+Simply SSH to the provided user, server, and port number. Just need to known syntax for ssh command.
+
+ssh ctf-player@titan.picoctf.net -p49566
+Gives flag.
+
+Flag: picoCTF{s3cur3_c0nn3ct10n_45a48857}
