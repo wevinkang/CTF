@@ -1,0 +1,6 @@
+10 tries to guess a number between 1 - 1000, and tells you higher or lower if you get incorrect.
+
+My method was to start with 500, then continue guessing the average number between the min and max each time.
+Example, guess 500, outputs incorrect, lower. Guess 250 next and so on. Searching up the Binary Search methodology, it's similar to how I guessed the number.
+
+picoCTF{g00d_gu355_1597707f}
