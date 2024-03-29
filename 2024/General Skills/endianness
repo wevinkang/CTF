@@ -1,0 +1,18 @@
+$ nc titan.picoctf.net 52790
+  Welcome to the Endian CTF!
+  You need to find both the little endian and big endian representations of a word.
+  If you get both correct, you will receive the flag.
+  Word: dodob
+  Enter the Little Endian representation:
+
+Here we have to convert the text, dodob to hexadecimal then find the Big and Little Endian representations which you can research about or simply put into a free online converter. Though, recommended to understand the concept.
+Simply put: Little Endian is reading from lowest significant byte to highest and vice versa for Big Endian.
+
+dodob to hex is: 646F646F62 which is also the Big representation.
+Little would be: 626F646F64
+
+Once entering both representations correctly, we get the flag. 
+
+Your Flag is: picoCTF{3ndi4n_sw4p_su33ess_25c5f083}
+
+
