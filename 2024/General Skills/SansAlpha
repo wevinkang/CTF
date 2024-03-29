@@ -1,0 +1,43 @@
+$ ssh -p 53781 ctf-player@mimas.picoctf.net
+
+Unable to use any letters for commands so had to do some research into special character or number commands. Came across, https://tldp.org/LDP/GNU-Linux-Tools-Summary/html/x11655.htm
+
+$ ./*
+  bash: ./blargh: Is a directory
+$ ./*/*
+  bash: ./blargh/flag.txt: Permission denied
+We found the flag's path relative to where we are right now, but we don't know the full path.
+
+$ /???
+  bash: /bin: Is a directory
+$ /????
+  bash: /boot: Is a directory
+$ /?????
+  bash: /lib32: Is a directory
+$ /??????
+  bash: /libx32: Is a directory
+Brute forcing this, I eventually found:
+$ /????/??????????
+  bash: /home/ctf-player: Is a directory
+Going to try matching with blargh to confirm the full path.
+$ /????/??????????/??????/????????
+  bash: /home/ctf-player/blargh/flag.txt: Permission denied
+At least now, we know we're in the /home/ctf-player directory and full path of the flag.
+
+Eventually had to throw the towel in and research a hint as I wasn't getting anywhere. Someone had the idea of using the /bin/base64 command.
+$ /???/????64 /????/??????????/??????/????????
+  /bin/base64: extra operand '/bin/x86_64'
+  Try '/bin/base64 --help' for more information.
+
+Have to somehow exclude x86_64, which we can do by using [!_]
+$ /???/???[!_]64 /????/??????????/??????/????????
+  cmV0dXJuIDAgcGljb0NURns3aDE1X211MTcxdjNyNTNfMTVfbTRkbjM1NV80OTQ1NjMwYX0=
+
+Plugged this into cyberchef and finally returned,
+return 0 picoCTF{7h15_mu171v3r53_15_m4dn355_4945630a}
+
+Flag: PicoCTF{7h15_mu171v3r53_15_m4dn355_4945630a}
+
+Honestly, this one was the hardest flag I've tried so far. Had to find the solution online, https://medium.com/@niceselol/picoctf-2024-dont-you-love-banners-40b8c1fc5050
+
+Learned special character command uses.
