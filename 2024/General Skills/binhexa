@@ -1,0 +1,18 @@
+$ nc titan.picoctf.net 49964
+  Welcome to the Binary Challenge!"
+  Your task is to perform the unique operations in the given order and find the final result in hexadecimal that yields the flag.
+  
+  Binary Number 1: 11111011
+  Binary Number 2: 01110000
+  
+  
+  Question 1/6:
+  Operation 1: '>>'
+  Perform a right shift of Binary Number 2 by 1 bits .
+  Enter the binary result: 111000
+
+There are 6 total challenges tasking you to do basic binary calculations such as addition, bitwise AND, bitwise OR, etc. and finally asks for hexadecimal value.
+
+After completing, will give you flag.
+
+Flag: picoCTF{b1tw^3se_0p3eR@tI0n_su33essFuL_d6f8047e}
