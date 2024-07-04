@@ -1,3 +1,6 @@
-'''bash'''
+Starting point 
+'''
 ssh -p 54801 ctf-player@rhea.picoctf.net
-'''bash'''
+'''
+
+sha256sum files/* | grep 55b983afdd9d10718f1db3983459efc5cc3f5a66841e2651041e25dec3efd46a
