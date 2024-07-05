@@ -16,7 +16,7 @@ picoCTF{f1u3n7_
 
 Flag: picoCTF{f1u3n7_1n_pn9_&_pdf_2a6a1ea8}
 
-#Lessons learned:
+# Lessons learned:
 
 Looking at other's methods of completing this flag, I learned some new useful forensics commands.
 
